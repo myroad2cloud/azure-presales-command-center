@@ -19,6 +19,7 @@ import './customer-meeting.css'
 import './solution-defence-boardroom.css'
 import './capstone-pursuit.css'
 import './learning-os.css'
+import './product-hub.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
