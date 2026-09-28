@@ -5,6 +5,7 @@ import App from './App'
 import './styles.css'
 import './advanced.css'
 import './artifact-workbench.css'
+import './control-room.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
