@@ -6,6 +6,7 @@ import './styles.css'
 import './advanced.css'
 import './artifact-workbench.css'
 import './control-room.css'
+import './deal-economics.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
