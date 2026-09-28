@@ -8,6 +8,7 @@ import './artifact-workbench.css'
 import './control-room.css'
 import './deal-economics.css'
 import './executive-review.css'
+import './discovery-simulator.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
