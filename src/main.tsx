@@ -17,6 +17,7 @@ import './microsoft-cosell.css'
 import './qualification-warroom.css'
 import './customer-meeting.css'
 import './solution-defence-boardroom.css'
+import './capstone-pursuit.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
