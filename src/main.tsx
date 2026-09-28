@@ -20,6 +20,7 @@ import './solution-defence-boardroom.css'
 import './capstone-pursuit.css'
 import './learning-os.css'
 import './product-hub.css'
+import './template-center.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
