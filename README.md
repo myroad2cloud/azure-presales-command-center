@@ -1,31 +1,44 @@
 # Azure Pre-Sales Command Center
 
-Interactive Senior Manager-level Azure pre-sales learning platform built around the Contoso Global transformation deal simulator.
+Interactive Senior Manager-level Azure pre-sales learning and deal-simulation platform built around an end-to-end Contoso Global transformation pursuit.
 
-## Current verified build status
+## Build 1.20 production-hardening status
 
-- Platform foundation: complete
-- React + TypeScript + Vite shell: complete
-- GitHub Pages workflow: complete
-- Responsive executive dashboard: complete
-- 14-stage deal simulator model: complete
-- Browser localStorage stage progress: complete
-- Contoso case snapshot: initial version complete
-- Daily mission: initial version complete
-- Daily micro-challenge: initial version complete
-- Detailed learning modules: pending
-- Architecture Lab: pending
-- Discovery Simulator: pending
-- Estimation Lab: pending
-- Resource Loading Lab: pending
-- Consumption Lab: pending
-- Commercial Lab: pending
-- SOW Lab: pending
-- Stakeholder Simulator: pending
-- Solution Defence Simulator: pending
-- Skills Radar: pending
-- Resource library: pending
-- Full QA: pending
+The platform has moved well beyond the original MVP. Current capabilities include:
+
+- React + TypeScript + Vite application shell
+- Responsive executive dashboard
+- 14-stage end-to-end deal simulator
+- Browser localStorage progress tracking
+- Detailed learning modules and Learning OS
+- Qualification War Room
+- Discovery Simulator
+- Customer Meeting Simulator
+- Architecture Decision Lab
+- Migration Factory Simulator
+- Resource Loading Lab
+- Deal Economics Lab
+- Microsoft Co-Sell Lab
+- SOW Risk Engine
+- Pursuit Control Room
+- Executive Deal Review
+- Solution Defence Boardroom
+- Capstone Pursuit
+- Assessment Center
+- Skills Radar
+- Artifact Workbench and reusable deal artifacts
+- Product Hub navigation
+- GitHub Pages CI/CD deployment
+- TypeScript validation in the deployment pipeline
+
+### Remaining production-hardening work
+
+- Pin dependency versions and introduce deterministic installs
+- Complete accessibility review, including keyboard focus and reduced-motion behavior
+- Improve page metadata and social-sharing metadata
+- Run final responsive and cross-browser QA
+- Reconcile build/version labels across the UI
+- Validate all learning content, calculators, scoring logic, and downloadable artifacts
 
 ## Local setup
 
@@ -34,31 +47,34 @@ npm install
 npm run dev
 ```
 
-Production build:
+Quality checks:
 
 ```bash
+npm run typecheck
 npm run build
 ```
 
 ## GitHub Pages
 
-The application is configured with Vite base path:
+The application is configured for the repository base path:
 
 ```text
 /azure-presales-command-center/
 ```
 
-The GitHub Actions workflow builds and deploys `dist` to GitHub Pages after a push to `main`.
-
-If Pages has not been enabled yet, open repository Settings > Pages and ensure GitHub Actions is selected as the source.
+A push to `main` triggers the GitHub Actions workflow. The pipeline installs dependencies, runs TypeScript validation, builds the Vite application, uploads `dist`, and deploys it to GitHub Pages.
 
 ## Product principle
 
-The platform is not a collection of disconnected Azure lessons. The Contoso opportunity is the spine:
+This is not a collection of disconnected Azure lessons. The Contoso opportunity is the learning spine:
 
 ```text
 QUALIFY → DISCOVER → ASSESS → SHAPE → ARCHITECT → ESTIMATE → CONSUMPTION
    → STAFF → COMMERCIALS → PROPOSE → DEFEND → NEGOTIATE → HANDOVER → DELIVERY
 ```
 
-Each stage will progressively include learning, scenarios, practical artifacts, deal risks, Senior Manager actions, and solution-defence practice.
+Every major capability should teach the learner to operate like a Senior Manager: connect customer outcomes to architecture, effort, Azure consumption, commercials, delivery feasibility, contractual exposure, Microsoft alignment, stakeholder decisions, and pursuit risk.
+
+## Definition of done for Build 1.20
+
+Build 1.20 is complete only when CI passes typecheck and production build, deployment succeeds, accessibility and responsive QA are completed, version labels are consistent, and the platform has no known release-blocking defects.
