@@ -1,7 +1,7 @@
 {
   "name": "azure-presales-command-center",
   "private": true,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -18,7 +18,9 @@
     "react-router-dom": "latest",
     "recharts": "latest",
     "mermaid": "latest",
-    "lucide-react": "latest"
+    "lucide-react": "latest",
+    "xlsx": "latest",
+    "pptxgenjs": "latest"
   },
   "devDependencies": {
     "@types/react": "latest",
