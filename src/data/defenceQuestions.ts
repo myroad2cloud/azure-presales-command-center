@@ -1,0 +1,16 @@
+export type DefenceQuestion={category:string;question:string;strongAnswer:string;trap:string}
+const seed:[string,string,string,string][]=[
+['Qualification','Why should we pursue this opportunity?','Tie the pursuit to a funded business driver, decision process, sponsor, timing and a credible path to win.','Starting architecture before proving there is a deal.'],
+['Discovery','Can you commit the migration date with incomplete dependency data?','Commit to a discovery and planning approach, not unsupported migration waves. State evidence gaps and decision gates.','Turning an aspiration into a contractual commitment.'],
+['Assessment','How do you classify application complexity?','Use explicit criteria such as dependencies, data, availability, security, integration, change tolerance and migration pattern, then validate with owners.','Calling complexity low, medium or high from VM size alone.'],
+['Architecture','Why not redesign everything during migration?','Separate migration risk from modernization value. Modernize where the business case and delivery capacity justify it.','Making technical elegance the primary objective.'],
+['Estimate','How defensible is this ROM?','Show scope basis, volumes, productivity assumptions, confidence range, exclusions, contingency and what evidence will tighten the estimate.','Presenting a single number as certainty.'],
+['Staffing','Why do you need architecture and PM effort throughout delivery?','Because governance, design decisions, dependency resolution, change control and customer alignment continue after planning.','Removing governance roles to reduce price.'],
+['Consumption','Is Azure retail pricing the customer commitment?','No. Treat early calculations as planning ROMs and validate final consumption through the approved pricing and commercial process.','Confusing infrastructure list price with the deal price.'],
+['Commercials','Customer asks for 12% discount. What do you do?','Model margin impact, then trade price against scope, risk, term, staffing, productivity or strategic funding rather than conceding blindly.','Discounting without changing economics.'],
+['SOW','What wording creates the most delivery risk?','Unbounded obligations such as all, any, as required or complete without measurable scope, responsibilities and acceptance criteria.','Assuming teams will interpret vague wording the same way.'],
+['Defence','What if you do not know an answer in the defence?','State what is known, identify the evidence needed, name the owner and commit to a controlled follow-up.','Guessing to appear confident.'],
+['Negotiation','How do you handle new scope during negotiation?','Log the change, quantify effort, schedule, cost and risk, then trade consciously through change control.','Absorbing scope to protect the relationship.'],
+['Handover','What must delivery receive from pre-sales?','Scope, architecture, estimate basis, assumptions, exclusions, commitments, RAID, commercials relevant to execution and decision history.','Handing over only the proposal deck.'],
+]
+export const defenceQuestions:DefenceQuestion[]=Array.from({length:100},(_,i)=>{const s=seed[i%seed.length];return {category:s[0],question:`${s[1]}${i>=seed.length?` [Scenario ${i+1}]`:''}`,strongAnswer:s[2],trap:s[3]}})
