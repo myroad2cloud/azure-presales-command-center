@@ -1,0 +1,10 @@
+import { dealStages } from '../data/dealStages'
+
+type Skill={name:string;stages:string[]}
+const skills:Skill[]=[
+{name:'Discovery',stages:['qualify','discover','assess']},{name:'Solution Shaping',stages:['shape']},{name:'Architecture',stages:['architect']},{name:'Migration',stages:['assess','shape','architect']},{name:'AI',stages:['architect']},{name:'Consumption',stages:['consumption']},{name:'Estimation',stages:['estimate']},{name:'Staffing',stages:['staff']},{name:'Commercials',stages:['commercials','negotiate']},{name:'SOW',stages:['propose']},{name:'Microsoft Ecosystem',stages:['qualify','propose']},{name:'Executive Communication',stages:['propose','defend']},{name:'Solution Defence',stages:['defend']},{name:'Delivery Handover',stages:['handover','delivery']},]
+const labels=['','Awareness','Understand','Execute','Lead','Defend']
+export function SkillsRadar({completedStages}:{completedStages:string[]}){
+ const maturity=(s:Skill)=>{const done=s.stages.filter(x=>completedStages.includes(x)).length; if(!done)return 1; const ratio=done/s.stages.length; return Math.min(5,ratio===1?4:Math.max(2,Math.ceil(ratio*4)))}
+ return <section className="panel lab"><p className="eyebrow">SKILLS RADAR</p><h2>Evidence-based capability view</h2><p className="lead">Indicative only. Levels are inferred from completed deal stages, not claimed professional proficiency. Use assessments and real deal evidence before treating a skill as validated.</p><div className="skills-grid">{skills.map(s=>{const level=maturity(s);return <article key={s.name}><div className="skill-head"><strong>{s.name}</strong><span>L{level} · {labels[level]}</span></div><div className="skill-track"><i style={{width:`${level*20}%`}}/></div><small>Evidence: {s.stages.map(id=>dealStages.find(x=>x.id===id)?.label).filter(Boolean).join(' · ')}</small></article>})}</div><div className="framework"><span>1 Awareness</span><span>2 Understand</span><span>3 Execute</span><span>4 Lead</span><span>5 Defend</span></div></section>
+}
